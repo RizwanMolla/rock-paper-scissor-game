@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Parkinsans", sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: url("assets/background.jpg") no-repeat center center/cover;
+    color: aliceblue;
+}
+
+.heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.gameBox {
+    color: aliceblue;
+    margin: 0 auto;
+    padding: 40px 30px 50px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
+    background: rgba(10, 10, 10, 0.8);
+    opacity: 0.9;
+    backdrop-filter: blur(30px);
+    border: 1px solid aliceblue;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    min-height: 400px;
+}
+
+.scoreboard-container {
+    color: aliceblue;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    background: rgba(10, 10, 10, 0.8);
+    opacity: 0.9;
+    backdrop-filter: blur(30px);
+    border: 1px solid aliceblue;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+
+.scoreboard-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.scoreboard {
+    width: 45%;
+    margin: 0 10px;
+    text-align: center;
+}
+
+.scoreboard-heading {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#player-score, #computer-score {
+    margin: 10px 0;
+}
+
+.player, .computer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.player p, .computer p {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+input[type="text"] {
+    text-align: center;
+    font-size: 1rem;
+    padding: 5px;
+    border: 1px solid aliceblue;
+    border-radius: 5px;
+    background: transparent;
+    color: aliceblue;
+    width: 100%;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.myChoice {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.name {
+    margin-bottom: 50px;
+    border: none;
+}
+
+.playerName {
+    text-align: center;
+    font-size: 1rem;
+    padding: 20px;
+    border: 1px solid aliceblue;
+    border-radius: 5px;
+    background: transparent;
+    color: aliceblue;
+    width: 100%;
+}
+
+.signs {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+button {
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+#rocksign {
+    background-image: url("assets/rock.png");
+}
+
+#papersign {
+    background-image: url("assets/paper.png");
+}
+
+#scissorsign {
+    background-image: url("assets/scissor.png");
+}
+
+.computer .comp img {
+    max-width: 80px;
+    max-height: 80px;
+    border-radius: 50%;
+    border: 2px solid aliceblue;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 5px;
+}
+
+.end {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.reset {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ff6347;
+    color: aliceblue;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.reset:hover {
+    background-color: #e55347;
+}
+
+#show-result {
+    margin-top: 20px;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.2rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid aliceblue;
+    border-radius: 5px;
+    color: aliceblue;
+    height: auto;
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .gameBox {
+        padding: 20px;
+        min-height: auto;
+    }
+
+    .signs button {
+        width: 50px;
+        height: 50px;
+    }
+
+    .scoreboard-container {
+        padding: 15px;
+    }
+
+    .heading {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .gameBox {
+        padding: 15px;
+        min-width: 100%;
+    }
+
+    .scoreboard-container {
+        width: 100%;
+        max-width: none;
+    }
+
+    button {
+        width: 40px;
+        height: 40px;
+    }
+
+    .heading {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    input[type="text"] {
+        font-size: 0.9rem;
+    }
+}

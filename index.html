@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock-Paper-Scissors</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="gameBox">
+        <h1 class="heading">ROCK PAPER SCISSORS</h1>
+
+        <div class="scoreboard-container">
+            <h2 class="scoreboard-heading">Scoreboard</h2>
+            <div class="scoreboard-row">
+                <div class="scoreboard">
+                <p>Player</p>
+                <input type="text" id="player-score" value="0" readonly>
+            </div>
+            <div class="scoreboard">
+                <p>Computer</p>
+                <input type="text" id="computer-score" value="0" readonly>
+            </div>
+        </div>
+    </div>
+
+        <div class="myChoice">
+            <div class="name">
+                <label for="player-name">Enter your name : </label>
+                <input type="text" id="player-name" class="playerName" placeholder="Enter Player Name" onchange="changeName()">
+            </div>
+            <div class="signs">
+                <button id="rocksign" onclick="playGame('rock')"></button>
+                <button id="papersign" onclick="playGame('paper')"></button>
+                <button id="scissorsign" onclick="playGame('scissor')"></button>
+            </div>
+        </div>
+
+        <div class="computer">
+            <p class="chead">Computer's Choice</p>
+            <div class="comp">
+                <img id="computer-img" src="assets/computer.png">
+            </div>
+        </div>
+
+        <div class="end">
+            <input type="text" id = "show-result" readonly>
+            <button class="reset" onclick="resetGame()">Reset</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
